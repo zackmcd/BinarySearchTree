@@ -3,11 +3,6 @@
 using namespace std;
 
 /**
- * Implements an unbalanced binary search tree.
- * Note that all "matching" is based on the compares method.
- * @author Mark Allen Weiss
- */
-/**
  * Construct the tree.
  */
 template <class Comparable>
@@ -243,23 +238,6 @@ find( const Comparable & x, BinaryNodeX<Comparable> *t ) const
     else
         return t;    // Match
 }
-/****** NONRECURSIVE VERSION*************************
-template <class Comparable>
-BinaryNodeX<Comparable> *
-BinarySearchTreeX<Comparable>::
-find( const Comparable & x, BinaryNodeX<Comparable> *t ) const
-{
-    while( t != NULL )
-        if( x < t->element )
-            t = t->left;
-        else if( t->element < x )
-            t = t->right;
-        else
-            return t;    // Match
-
-    return NULL;   // No match
-}
-*****************************************************/
 
 /**
  * Internal method to make subtree empty.
